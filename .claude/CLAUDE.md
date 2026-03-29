@@ -99,3 +99,4 @@ curl -X POST http://localhost:3000/api/contact \
 - Don't use inline styles — Tailwind classes only
 - Don't mutate state — immutable updates only (spread, new objects)
 - Don't expose env vars to the client — all secrets stay in `api/`
+- Don't initialize SDK clients (Resend, etc.) at module level in `api/` functions — always inside the handler, with a missing-key guard

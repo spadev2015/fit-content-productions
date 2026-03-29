@@ -1,3 +1,5 @@
+import { Instagram } from "lucide-react";
+
 export default function Footer() {
   return (
     <footer className="bg-neutral-950 text-white py-12 px-6 border-t border-neutral-900">
@@ -5,11 +7,9 @@ export default function Footer() {
         <div className="text-2xl font-bold flex items-center gap-2">
           <span className="text-accent">Fit</span>Content
         </div>
-        <div className="flex gap-6 text-sm text-neutral-400">
-          <a href="#" className="hover:text-accent">Instagram</a>
-          <a href="#" className="hover:text-accent">TikTok</a>
-          <a href="#" className="hover:text-accent">YouTube</a>
-        </div>
+        <a href="#" className="text-neutral-400 hover:text-accent transition-colors duration-200">
+          <Instagram size={24} />
+        </a>
         <div className="text-sm text-neutral-500">© 2026 Fit Content Productions.</div>
       </div>
     </footer>

@@ -18,10 +18,14 @@ export default function Hero() {
             Fit Content Productions helps gyms, trainers, and wellness businesses create short-form video, reels, and social media assets that build authority and drive clients.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button variant="primary" className="flex items-center gap-2">
-              Book a Shoot <Video size={18} />
-            </Button>
-            <Button variant="outline">See Our Work</Button>
+            <a href="#contact">
+              <Button variant="primary" className="flex items-center gap-2">
+                Book a Shoot <Video size={18} />
+              </Button>
+            </a>
+            <a href="#work">
+              <Button variant="outline">See My Work</Button>
+            </a>
           </div>
         </div>
 

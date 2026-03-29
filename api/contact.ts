@@ -1,12 +1,12 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 interface ContactForm {
   firstName: string;
   lastName: string;
   email: string;
+  igProfile?: string;
+  phoneNumber?: string;
   service: string;
   message: string;
 }
@@ -16,11 +16,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ success: false, error: "Method not allowed" });
   }
 
-  const { firstName, lastName, email, service, message } = req.body as ContactForm;
+  const { firstName, lastName, email, igProfile, phoneNumber, service, message } = req.body as ContactForm;
 
   if (!firstName || !email || !service) {
     return res.status(400).json({ success: false, error: "Missing required fields" });
   }
+
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    return res.status(500).json({ success: false, error: "Server configuration error" });
+  }
+  const resend = new Resend(apiKey);
 
   const notificationEmail = process.env.NOTIFICATION_EMAIL;
   if (!notificationEmail) {
@@ -28,19 +34,26 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "Fit Content Productions <onboarding@resend.dev>",
       to: notificationEmail,
+      replyTo: email,
       subject: `New Booking Request from ${firstName} ${lastName}`,
       html: `
         <h2>New Booking Request</h2>
         <p><strong>Name:</strong> ${firstName} ${lastName}</p>
         <p><strong>Email:</strong> ${email}</p>
+        ${igProfile ? `<p><strong>Instagram:</strong> ${igProfile}</p>` : ""}
+        ${phoneNumber ? `<p><strong>Phone:</strong> ${phoneNumber}</p>` : ""}
         <p><strong>Service:</strong> ${service}</p>
         <p><strong>Message:</strong></p>
         <p>${message || "No message provided"}</p>
       `,
     });
+
+    if (error) {
+      return res.status(500).json({ success: false, error: error.message });
+    }
 
     return res.status(200).json({ success: true });
   } catch (error: unknown) {

@@ -13,7 +13,7 @@ export default function Services() {
   return (
     <section id="services" className="py-24 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16">
-        <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Explore Our Services</h2>
+        <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Explore My Services</h2>
         <p className="text-neutral-400 max-w-2xl mx-auto">Content solutions built specifically for the fitness industry to help you stand out and convert followers into clients.</p>
       </div>
       

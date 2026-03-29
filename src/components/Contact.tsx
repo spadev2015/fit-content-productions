@@ -9,6 +9,8 @@ interface FormData {
   firstName: string;
   lastName: string;
   email: string;
+  igProfile: string;
+  phoneNumber: string;
   service: string;
   message: string;
 }
@@ -17,6 +19,8 @@ const initialFormData: FormData = {
   firstName: "",
   lastName: "",
   email: "",
+  igProfile: "",
+  phoneNumber: "",
   service: "",
   message: "",
 };
@@ -66,7 +70,7 @@ export default function Contact() {
         <div className="relative z-10">
           <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">Book a Shoot</h2>
           <p className="text-neutral-400 text-lg mb-8 max-w-md">
-            Ready to elevate your fitness brand? Fill out the form below and we'll get back to you within 24 hours to discuss your project.
+            Ready to elevate your fitness brand? Fill out the form below and I'll get back to you within 24 hours to discuss your project.
           </p>
 
           {status === "success" ? (
@@ -74,7 +78,7 @@ export default function Contact() {
               <CheckCircle className="text-green-400 shrink-0" size={24} />
               <div>
                 <p className="text-green-400 font-bold">Request Submitted!</p>
-                <p className="text-neutral-400 text-sm mt-1">We'll be in touch within 24 hours.</p>
+                <p className="text-neutral-400 text-sm mt-1">I'll be in touch within 24 hours.</p>
               </div>
             </div>
           ) : (
@@ -107,6 +111,24 @@ export default function Contact() {
                 onChange={handleChange}
                 className={inputClass}
               />
+              <div className="grid grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="igProfile"
+                  placeholder="Instagram Handle"
+                  value={formData.igProfile}
+                  onChange={handleChange}
+                  className={inputClass}
+                />
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  placeholder="Phone Number"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  className={inputClass}
+                />
+              </div>
               <select
                 name="service"
                 required
@@ -115,14 +137,17 @@ export default function Contact() {
                 className={`${inputClass} ${formData.service === "" ? "text-neutral-500" : ""} appearance-none`}
               >
                 <option value="" disabled>Select Service</option>
-                <option value="short-form">Short-Form Video (Reels/TikTok)</option>
-                <option value="gym-shoot">Gym & Studio Shoot</option>
-                <option value="photography">Brand Photography</option>
-                <option value="other">Other</option>
+                <option value="Video Production">Video Production</option>
+                <option value="Custom Video Editing">Custom Video Editing</option>
+                <option value="Social Content Creation">Social Content Creation</option>
+                <option value="AI Thumbnail & Cover Design">AI Thumbnail & Cover Design</option>
+                <option value="Fitness Media Shoots">Fitness Media Shoots</option>
+                <option value="Content Strategy">Content Strategy</option>
+                <option value="Other">Other</option>
               </select>
               <textarea
                 name="message"
-                placeholder="Tell us about your brand and goals..."
+                placeholder="Tell me about your brand and goals..."
                 value={formData.message}
                 onChange={handleChange}
                 className={`${inputClass} h-32 resize-none`}

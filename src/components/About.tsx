@@ -26,9 +26,9 @@ export default function About() {
 
       <div>
         <div className="inline-flex items-center gap-2 text-accent font-bold uppercase tracking-widest mb-4 text-sm">
-          <span className="w-8 h-[2px] bg-accent"></span> About Us
+          <span className="w-8 h-[2px] bg-accent"></span> About Me
         </div>
-        <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">We create content that makes fitness brands impossible to ignore.</h2>
+        <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">I create content that makes fitness brands impossible to ignore.</h2>
         <p className="text-neutral-400 mb-8 text-lg">Fit Content Productions helps gyms, trainers, and wellness brands create high-quality content that looks professional, builds trust, and performs on social media.</p>
         <ul className="space-y-4">
           {["Short-form video production", "Gym brand content shoots", "Personal brand content", "Promotional videos", "Content strategy"].map((item, i) => (
