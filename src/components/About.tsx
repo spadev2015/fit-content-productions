@@ -1,4 +1,7 @@
 import { CheckCircle2 } from "lucide-react";
+import trainerImg from "../assets/images/videographer-with-cinema-camera-gym.jpg";
+import gymImg from "../assets/images/videographer-low-angle-gym-shoot.jpg";
+import equipmentImg from "../assets/images/filmmaker-setting-up-camera-rig.jpg";
 
 export default function About() {
   return (
@@ -6,11 +9,11 @@ export default function About() {
       {/* Masonry Image Grid */}
       <div className="grid grid-cols-2 gap-4 relative">
         <div className="space-y-4 mt-12">
-          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop" alt="Trainer" className="rounded-3xl object-cover aspect-square w-full" referrerPolicy="no-referrer" />
-          <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop" alt="Gym" className="rounded-3xl object-cover aspect-[4/5] w-full" referrerPolicy="no-referrer" />
+          <img src={trainerImg} alt="Videographer with cinema camera at the gym" className="rounded-3xl object-cover aspect-square w-full" />
+          <img src={gymImg} alt="Videographer shooting low angle during gym content production" className="rounded-3xl object-cover aspect-[4/5] w-full" />
         </div>
         <div className="space-y-4">
-          <img src="https://images.unsplash.com/photo-1526506114642-54cb50c00052?q=80&w=1470&auto=format&fit=crop" alt="Equipment" className="rounded-3xl object-cover aspect-[4/5] w-full" referrerPolicy="no-referrer" />
+          <img src={equipmentImg} alt="Filmmaker setting up camera rig at the gym" className="rounded-3xl object-cover aspect-[4/5] w-full" />
           <div className="bg-neutral-900 rounded-3xl p-6 border border-neutral-800 flex flex-col justify-center items-center text-center aspect-square">
             <div className="text-5xl font-bold text-accent mb-2">100%</div>
             <div className="text-neutral-400 text-sm font-medium uppercase tracking-wider">Client Growth</div>

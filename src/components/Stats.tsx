@@ -1,9 +1,9 @@
 export default function Stats() {
   const stats = [
-    { label: "Videos Delivered", value: "500+" },
-    { label: "Fitness Shoots", value: "100+" },
-    { label: "Brands Worked With", value: "50+" },
-    { label: "Organic Views", value: "10M+" },
+    { label: "Client Growth Rate", value: "3x" },
+    { label: "Avg. Engagement Lift", value: "280%" },
+    { label: "Turnaround Time", value: "48h" },
+    { label: "Client Retention", value: "95%" },
   ];
 
   return (

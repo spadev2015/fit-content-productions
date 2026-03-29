@@ -1,13 +1,13 @@
-import { PlaySquare, Camera, UserSquare2, Clapperboard, Image as ImageIcon, Lightbulb } from "lucide-react";
+import { Video, Scissors, Share2, Image as ImageIcon, Camera, Lightbulb } from "lucide-react";
 
 export default function Services() {
   const services = [
-    { title: "Short-Form Video", desc: "Reels, TikToks, and social-first edits.", icon: PlaySquare },
-    { title: "Gym & Studio Shoots", desc: "Professional on-site filming.", icon: Camera },
-    { title: "Personal Brand", desc: "Content for coaches and influencers.", icon: UserSquare2 },
-    { title: "Promo Videos", desc: "Launch campaigns and branded creatives.", icon: Clapperboard },
-    { title: "Photography", desc: "Professional photos for marketing.", icon: ImageIcon },
-    { title: "Content Strategy", desc: "Creative direction and planning.", icon: Lightbulb },
+    { title: "Video Production", desc: "Professional video content for gyms, trainers, and wellness brands.", icon: Video },
+    { title: "Custom Video Editing", desc: "Edited reels, promos, talking videos, training clips, and branded media.", icon: Scissors },
+    { title: "Social Content Creation", desc: "Content designed for daily posting across Instagram, TikTok, and YouTube.", icon: Share2 },
+    { title: "AI Thumbnail & Cover Design", desc: "Custom thumbnails, reel covers, and branded graphics for stronger performance.", icon: ImageIcon },
+    { title: "Fitness Media Shoots", desc: "On-location filming and photography for the fitness industry.", icon: Camera },
+    { title: "Content Strategy", desc: "Creative planning for what to film, post, and how to make it perform.", icon: Lightbulb },
   ];
 
   return (

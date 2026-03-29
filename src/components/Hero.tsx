@@ -1,5 +1,6 @@
 import Button from "./Button";
 import { Activity, Video } from "lucide-react";
+import heroImg from "../assets/images/female-athlete-dumbbell-training-shoot.jpg";
 
 export default function Hero() {
   return (
@@ -23,14 +24,13 @@ export default function Hero() {
             <Button variant="outline">See Our Work</Button>
           </div>
         </div>
-        
+
         <div className="order-1 lg:order-2 relative">
-          <div className="relative rounded-3xl overflow-hidden aspect-[4/5] lg:aspect-square">
-            <img 
-              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop" 
-              alt="Fitness Athlete" 
+          <div className="relative rounded-3xl overflow-hidden aspect-[3/4]">
+            <img
+              src={heroImg}
+              alt="Fitness content creator laughing during a gym photo shoot"
               className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-80"></div>
           </div>

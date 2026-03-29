@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import athleteLaughing from "../assets/images/athlete-laughing-gym-hoodie-portrait.jpg";
 
 type SubmitStatus = "idle" | "submitting" | "success" | "error";
 
@@ -138,9 +139,11 @@ export default function Contact() {
           )}
         </div>
 
-        <div className="relative z-10 hidden lg:block h-full">
-          <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1470&auto=format&fit=crop" alt="Fitness Gear" className="rounded-3xl object-cover h-full w-full shadow-2xl" referrerPolicy="no-referrer" />
-          <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10"></div>
+        <div className="relative z-10 hidden lg:flex items-center justify-center">
+          <div className="relative w-3/4">
+            <img src={athleteLaughing} alt="Athlete laughing in gym hoodie" className="rounded-3xl w-full shadow-2xl" />
+            <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10"></div>
+          </div>
         </div>
 
         {/* Decorative elements */}
