@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section id="about" className="py-24 px-6 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
       {/* Masonry Image Grid */}
-      <div className="grid grid-cols-2 gap-4 relative">
+      <div className="grid grid-cols-2 gap-4 relative overflow-hidden">
         <div className="space-y-4 mt-12">
           <img src={trainerImg} alt="Videographer with cinema camera at the gym" className="rounded-3xl object-cover aspect-square w-full" />
           <img src={gymImg} alt="Videographer shooting low angle during gym content production" className="rounded-3xl object-cover aspect-[4/5] w-full" />

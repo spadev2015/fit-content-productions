@@ -4,7 +4,7 @@ import heroImg from "../assets/images/female-athlete-dumbbell-training-shoot.jpg
 
 export default function Hero() {
   return (
-    <section className="relative px-6 py-12 lg:py-24 max-w-7xl mx-auto">
+    <section className="relative px-6 py-12 lg:py-24 max-w-7xl mx-auto overflow-hidden">
       <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
         <div className="order-2 lg:order-1">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-accent text-sm font-medium mb-6">
@@ -40,22 +40,22 @@ export default function Hero() {
           </div>
           
           {/* Floating Badge 1 */}
-          <div className="absolute top-10 left-4 bg-neutral-800/90 backdrop-blur-md border border-neutral-700 p-4 rounded-2xl shadow-2xl flex items-center gap-4 animate-[bounce_4s_infinite] z-20">
-            <div className="bg-accent p-3 rounded-full text-white">
-              <Activity size={24} />
+          <div className="absolute top-32 lg:top-10 left-4 bg-neutral-800/90 backdrop-blur-md border border-neutral-700 p-2.5 lg:p-4 rounded-xl lg:rounded-2xl shadow-2xl flex items-center gap-2.5 lg:gap-4 animate-[bounce_4s_infinite] z-20">
+            <div className="bg-accent p-2 lg:p-3 rounded-full text-white">
+              <Activity className="size-4 lg:size-6" />
             </div>
             <div>
-              <div className="text-xs text-neutral-400 font-medium uppercase tracking-wider">High Impact</div>
-              <div className="text-lg font-bold text-white">Content</div>
+              <div className="text-[10px] lg:text-xs text-neutral-400 font-medium uppercase tracking-wider">High Impact</div>
+              <div className="text-sm lg:text-lg font-bold text-white">Content</div>
             </div>
           </div>
 
           {/* Floating Badge 2 */}
-          <div className="absolute bottom-2 right-2 bg-neutral-900/90 backdrop-blur-md border border-neutral-800 p-4 rounded-2xl shadow-2xl flex items-center gap-4 animate-[bounce_5s_infinite_reverse] z-20">
-            <div className="text-4xl font-bold text-accent">10x</div>
+          <div className="absolute bottom-2 right-2 bg-neutral-900/90 backdrop-blur-md border border-neutral-800 p-2.5 lg:p-4 rounded-xl lg:rounded-2xl shadow-2xl flex items-center gap-2.5 lg:gap-4 animate-[bounce_5s_infinite_reverse] z-20">
+            <div className="text-2xl lg:text-4xl font-bold text-accent">10x</div>
             <div>
-              <div className="text-xs text-neutral-400 font-medium uppercase tracking-wider">More</div>
-              <div className="text-lg font-bold text-white">Engagement</div>
+              <div className="text-[10px] lg:text-xs text-neutral-400 font-medium uppercase tracking-wider">More</div>
+              <div className="text-sm lg:text-lg font-bold text-white">Engagement</div>
             </div>
           </div>
         </div>

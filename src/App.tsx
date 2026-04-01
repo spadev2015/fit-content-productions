@@ -15,7 +15,7 @@ import PromoModal from "./components/PromoModal";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-50 font-sans selection:bg-accent selection:text-neutral-950">
+    <div className="min-h-screen bg-neutral-950 text-neutral-50 font-sans selection:bg-accent selection:text-neutral-950 overflow-x-hidden">
       <PromoModal />
       <Navbar />
       <Hero />
