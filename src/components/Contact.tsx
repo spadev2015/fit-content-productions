@@ -83,25 +83,15 @@ export default function Contact() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
-              <div className="grid grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name"
-                  required
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  className={inputClass}
-                />
-                <input
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  className={inputClass}
-                />
-              </div>
+              <input
+                type="text"
+                name="firstName"
+                placeholder="Full Name"
+                required
+                value={formData.firstName}
+                onChange={handleChange}
+                className={inputClass}
+              />
               <input
                 type="email"
                 name="email"
@@ -111,24 +101,22 @@ export default function Contact() {
                 onChange={handleChange}
                 className={inputClass}
               />
-              <div className="grid grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="igProfile"
-                  placeholder="Instagram Handle"
-                  value={formData.igProfile}
-                  onChange={handleChange}
-                  className={inputClass}
-                />
-                <input
-                  type="tel"
-                  name="phoneNumber"
-                  placeholder="Phone Number"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  className={inputClass}
-                />
-              </div>
+              <input
+                type="text"
+                name="igProfile"
+                placeholder="Instagram Handle"
+                value={formData.igProfile}
+                onChange={handleChange}
+                className={inputClass}
+              />
+              <input
+                type="tel"
+                name="phoneNumber"
+                placeholder="Phone Number"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+                className={inputClass}
+              />
               <select
                 name="service"
                 required

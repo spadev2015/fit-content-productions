@@ -20,7 +20,9 @@ export default function Navbar() {
         <a href="#work" className="hover:text-accent transition-colors">Work</a>
         <a href="#about" className="hover:text-accent transition-colors">About</a>
       </div>
-      <Button variant="primary" className="hidden md:flex px-5 py-2 text-sm">Book a Shoot</Button>
+      <a href="#contact" className="flex">
+        <Button variant="primary" className="px-5 py-2 text-sm">Book a Shoot</Button>
+      </a>
     </nav>
   );
 }

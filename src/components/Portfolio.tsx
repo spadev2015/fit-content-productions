@@ -53,20 +53,26 @@ export default function Portfolio() {
         <p className="text-neutral-400 max-w-2xl mx-auto">Real content from real shoots — reels, thumbnails, promos, and branded fitness media.</p>
       </div>
 
-      <div className="grid grid-cols-3 md:grid-cols-4 gap-2">
+      {/* Mobile: 2 columns */}
+      <div className="grid grid-cols-2 gap-2 md:hidden">
+        {distributeItems(allItems, 2).map((col, colIdx) => (
+          <div key={colIdx} className="flex flex-col gap-2">
+            {col.map((item, i) => (
+              <div key={i} className="rounded-2xl overflow-hidden group relative">
+                <img src={item.src} alt={item.alt} className="w-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+      {/* Desktop: 4 columns */}
+      <div className="hidden md:grid grid-cols-4 gap-2">
         {columns.map((col, colIdx) => (
           <div key={colIdx} className="flex flex-col gap-2">
             {col.map((item, i) => (
-              <div
-                key={i}
-                className="rounded-2xl overflow-hidden group relative"
-              >
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
+              <div key={i} className="rounded-2xl overflow-hidden group relative">
+                <img src={item.src} alt={item.alt} className="w-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             ))}
