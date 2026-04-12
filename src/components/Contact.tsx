@@ -72,6 +72,9 @@ export default function Contact() {
           <p className="text-neutral-400 text-lg mb-8 max-w-md">
             Ready to elevate your fitness brand? Fill out the form below and I'll get back to you within 24 hours to discuss your project.
           </p>
+          <p className="text-neutral-500 text-sm mb-8 max-w-md -mt-4">
+            Pricing will be discussed on the intro call, based on your needs.
+          </p>
 
           {status === "success" ? (
             <div className="flex items-center gap-3 p-6 rounded-2xl bg-green-950/50 border border-green-800 max-w-md">

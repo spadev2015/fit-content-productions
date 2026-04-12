@@ -13,7 +13,8 @@
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
-    "test:e2e:headed": "playwright test --headed"
+    "test:e2e:headed": "playwright test --headed",
+    "optimize-images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
@@ -39,6 +40,7 @@
     "@vitest/coverage-v8": "^4.1.2",
     "autoprefixer": "^10.4.21",
     "jsdom": "^29.0.1",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",

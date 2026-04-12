@@ -13,6 +13,9 @@ import portfolio12 from "../assets/images/fitness-influencer-motivational-conten
 import portfolio13 from "../assets/images/male-athlete-gym-content-shoot.jpg";
 import portfolio14 from "../assets/images/gym-floor-portrait-behind-the-scenes.jpg";
 import portfolio15 from "../assets/images/trainer-leg-press-coaching-reel.jpg";
+import portfolio16 from "../assets/images/female-athlete-branded-bodysuit-portrait.jpg";
+import portfolio17 from "../assets/images/fitness-duo-activewear-studio-shoot.jpg";
+import portfolio18 from "../assets/images/female-model-studio-profile-portrait.jpg";
 
 const allItems = [
   { src: portfolio7, alt: "Fitness content creator laughing during gym shoot" },
@@ -30,6 +33,9 @@ const allItems = [
   { src: portfolio13, alt: "Male athlete during gym content shoot" },
   { src: portfolio14, alt: "Behind the scenes gym floor portrait session" },
   { src: portfolio15, alt: "Trainer coaching leg press form during reel shoot" },
+  { src: portfolio16, alt: "Female athlete in branded bodysuit portrait" },
+  { src: portfolio17, alt: "Fitness duo activewear studio shoot" },
+  { src: portfolio18, alt: "Female model studio profile portrait" },
 ];
 
 function distributeItems(items: typeof allItems, colCount: number) {

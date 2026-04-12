@@ -70,8 +70,8 @@ export default function PromoModal() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...formData,
-          service: "Free Shooting Promo",
-          message: "Submitted via free shooting promo popup.",
+          service: "Booking Request",
+          message: "Submitted via booking popup.",
         }),
       });
 
@@ -104,7 +104,7 @@ export default function PromoModal() {
         <motion.div
           role="dialog"
           aria-modal="true"
-          aria-label="Free shooting promo"
+          aria-label="Book now"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -128,13 +128,13 @@ export default function PromoModal() {
             </button>
 
             <p className="text-xs uppercase tracking-widest text-[var(--color-accent)] text-center mb-3 font-bold">
-              Limited Offer
+              Get Started
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 font-display text-center">
-              Book a <span className="text-[var(--color-accent)]">Free</span> Shooting
+              Book <span className="text-[var(--color-accent)]">Now</span>
             </h2>
             <p className="text-sm sm:text-base text-neutral-400 mb-4 sm:mb-6 text-center">
-              Limited spots available. Claim your complimentary session and see what professional fitness content can do for your brand.
+              Fill in your details and we'll set up an intro call to discuss your project.
             </p>
 
             {status === "success" ? (
@@ -142,7 +142,7 @@ export default function PromoModal() {
                 <CheckCircle className="text-green-400 shrink-0" size={24} />
                 <div>
                   <p className="text-green-400 font-bold">You're Booked!</p>
-                  <p className="text-neutral-400 text-sm mt-1">I'll reach out within 24 hours to schedule your free session.</p>
+                  <p className="text-neutral-400 text-sm mt-1">I'll reach out within 24 hours to schedule your intro call.</p>
                 </div>
               </div>
             ) : (
@@ -209,7 +209,7 @@ export default function PromoModal() {
                 )}
 
                 <Button type="submit" variant="primary" disabled={status === "submitting"} className="w-full flex items-center justify-center gap-2 py-4 text-lg font-bold mt-2 shadow-[0_0_20px_rgba(185,28,28,0.3)]">
-                  {status === "submitting" ? "Submitting..." : "Claim Your Free Session"} <ArrowRight size={20} />
+                  {status === "submitting" ? "Submitting..." : "Book Now"} <ArrowRight size={20} />
                 </Button>
               </form>
             )}
